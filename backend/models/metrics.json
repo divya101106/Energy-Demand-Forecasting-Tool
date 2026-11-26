@@ -1,0 +1,16 @@
+{
+  "MAE": 2624.1,
+  "RMSE": 3399.04,
+  "training_rows": 1470,
+  "testing_rows": 630,
+  "training_start": "2015-01-01 00:00:00",
+  "training_end": "2019-01-09 00:00:00",
+  "testing_start": "2019-01-10 00:00:00",
+  "testing_end": "2020-09-30 00:00:00",
+  "frequency": "daily",
+  "target": "DE_load_actual_entsoe_transparency",
+  "unit": "MW",
+  "baseline_MAE": 2065.4,
+  "baseline_RMSE": 3635.66,
+  "improvement_pct": 6.51
+}

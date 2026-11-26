@@ -1,0 +1,33 @@
+{
+  "dataset_name": "Open Power System Data (OPSD)",
+  "country": "Germany",
+  "target_column": "DE_load_actual_entsoe_transparency",
+  "unit": "MW",
+  "detection_date": "2026-11-18T17:36:36.934828",
+  "total_dataset_observations": 2100,
+  "total_anomalies_detected": 96,
+  "anomaly_rate_pct": 4.57,
+  "threshold_calculation": {
+    "method": "Robust Median Absolute Deviation (MAD)",
+    "multiplier_k": 3.0,
+    "training_observations_used": 1470,
+    "training_period": "2015-01-01 to 2019-01-09",
+    "median_residual_mw": 255.03,
+    "mad_mw": 1031.14,
+    "mad_sigma_mw": 1528.76,
+    "anomaly_threshold_mw": 4586.28,
+    "severity_thresholds_mw": {
+      "low": 4586.28,
+      "medium": 5350.66,
+      "high": 6879.43
+    },
+    "no_future_data_leakage": true
+  },
+  "counts": {
+    "high_demand_spikes": 19,
+    "low_demand_drops": 77,
+    "high_severity": 61,
+    "medium_severity": 14,
+    "low_severity": 21
+  }
+}

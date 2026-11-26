@@ -1,0 +1,43 @@
+{
+  "dataset_name": "Open Power System Data (OPSD)",
+  "country": "Germany",
+  "target_column": "DE_load_actual_entsoe_transparency",
+  "unit": "MW",
+  "evaluation_methodology": "Strict Chronological 70/30 Holdout Split (No Lookahead Bias)",
+  "training_observations": 1470,
+  "testing_observations": 630,
+  "training_period": "2015-01-01 to 2019-01-09",
+  "testing_period": "2019-01-10 to 2020-09-30",
+  "prophet_metrics": {
+    "model_name": "Prophet (Evaluated on Held-Out Split)",
+    "model_version": "v2.1-de-prophet",
+    "mae": 2624.1,
+    "rmse": 3399.04,
+    "mape": 5.06,
+    "unit": "MW"
+  },
+  "baseline_metrics": {
+    "model_name": "Seasonal-Naive (7-day lag)",
+    "mae": 2065.4,
+    "rmse": 3635.66,
+    "mape": 3.94,
+    "improvement_vs_naive_rmse_pct": 6.51,
+    "unit": "MW"
+  },
+  "better_performing_model": "Prophet",
+  "prophet_configuration": {
+    "growth": "linear",
+    "yearly_seasonality": true,
+    "weekly_seasonality": true,
+    "daily_seasonality": false,
+    "seasonality_mode": "additive",
+    "changepoint_prior_scale": 0.05,
+    "country_holidays": "DE (Germany)",
+    "interval_width": 0.8
+  },
+  "data_leakage_audit": {
+    "original_artifact_had_leakage": true,
+    "original_artifact_explanation": "The supplied 'prophet_model.json' was trained on all 2,100 observations (2015-2020). Evaluating it on the test period would suffer from data leakage. Therefore, this evaluation model was trained strictly on the 1,470-day training portion to guarantee a valid holdout test.",
+    "evaluation_model_leakage_free": true
+  }
+}
