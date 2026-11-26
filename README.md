@@ -1,9 +1,5 @@
 # Energy Demand Forecasting Tool
 
-> **Semester Project Demonstration — Advanced Data Science & Full-Stack Web Application**  
-> **UI Theme:** Sleek Dark Theme with Monochromatic Contrast Palette  
-> **Demonstration Mode:** Synthetic Test Data (100% Deterministic & Reproducible)
-
 ---
 
 ## 1. Project Overview
